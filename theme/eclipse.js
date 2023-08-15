@@ -94,5 +94,12 @@ background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZ
 exports.cssClass = "ace-eclipse";
 
 var dom = acequire("../lib/dom");
-dom.importCssString(exports.cssText, exports.cssClass);
-});
+dom.importCssString(exports.cssText, exports.cssClass, false);
+});                (function() {
+                    ace.acequire(["ace/theme/eclipse"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            

@@ -123,7 +123,15 @@ border: 1px solid rgb(200, 200, 250);\
 background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y;\
 }\
 ";
+exports.$id = "ace/theme/textmate";
 
 var dom = acequire("../lib/dom");
-dom.importCssString(exports.cssText, exports.cssClass);
-});
+dom.importCssString(exports.cssText, exports.cssClass, false);
+});                (function() {
+                    ace.acequire(["ace/theme/textmate"], function(m) {
+                        if (typeof module == "object" && typeof exports == "object" && module) {
+                            module.exports = m;
+                        }
+                    });
+                })();
+            
